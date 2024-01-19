@@ -22,7 +22,7 @@ ln -s grpc-1.60 grpc
 
 ### Build and install opencv
 
-make install する際に /lib への権限が必要なライブラリがあったので、sudo をつけて実行すること
+make install する際に root 権限が必要なライブラリがあったので、sudo をつけて実行すること
 
 ```
 mkdir -p grpc/build
