@@ -10,7 +10,7 @@ mkdir -p $GRPC_INSTALL_DIR && \
 export PATH="$GRPC_INSTALL_DIR/bin:$PATH"
 ```
 
-### Download the grcp source code
+### Download the grpc source code
 
 ```
 mkdir -p library && \
@@ -20,16 +20,17 @@ ln -s grpc-1.60 grpc
 ```
 
 
-### Build and install opencv
+### Build and install grpc
 
 make install する際に root 権限が必要なライブラリがあったので、sudo をつけて実行すること
+CMAKE_INSTALL_PREFIX でインストール先を指定すること。*指定しないとデフォルトのフォルダ /lib などにビルドしたファイルがインストールされる
 
 ```
 mkdir -p grpc/build
 cd grpc/build
 cmake -DgRPC_INSTALL=ON \
-  -DgRPC_BUILD_TESTS=OFF \
-  -DCMAKE_INSTALL_PREFIX=$GRPC_INSTALL_DIR \
+  -D gRPC_BUILD_TESTS=OFF \
+  -D CMAKE_INSTALL_PREFIX=$GRPC_INSTALL_DIR \
   ../ && \
 make -j 4 && \
 sudo make install && \
@@ -37,15 +38,16 @@ popd
 ```
 ## Build sample app
 
+CMAKE_PREFIX_PATH でインストール先のディレクトリを指定する
+
 ```
 mkdir -p build && \
 pushd build && \
-cmake .. && \
+cmake -D CMAKE_PREFIX_PATH=$GRPC_INSTALL_PATH .. && \
 make -j 4 && \
 popd
 ```
 
 ## reference
 
-- [opencv.org](https://opencv.org)
-- [C++でOpenCV完全入門！](https://zenn.dev/turing_motors/articles/daf3e8829f0967)
+- [gRPC Quick start](https://grpc.io/docs/languages/cpp/quickstart/)
