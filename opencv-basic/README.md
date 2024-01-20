@@ -5,9 +5,9 @@
 ### Setup
 
 ```
-export OPENCV_INSTALL_DIR=$HOME/.opencv-lib && \
-mkdir -p $OPENCV_INSTALL_DIR && \
-export PATH="$OPENCV_INSTALL_DIR/bin:$PATH"
+export OPENCV_INSTALL_PATH=$HOME/.opencv-lib && \
+mkdir -p $OPENCV_INSTALL_PATH && \
+export PATH="$OPENCV_INSTALL_PATH/bin:$PATH"
 ```
 
 ### Download the opencv source code
@@ -26,7 +26,7 @@ ln -s opencv-4.8.1 opencv
 ```
 mkdir -p opencv/build
 cd opencv/build
-cmake -D CMAKE_INSTALL_PREFIX=$OPENCV_INSTALL_DIR \
+cmake -D CMAKE_INSTALL_PREFIX=$OPENCV_INSTALL_PATH \
   -D BUILD_DOCS=OFF \
   -D BUILD_EXAMPLES=OFF \
   -D BUILD_TESTS=OFF \
