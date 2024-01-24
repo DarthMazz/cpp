@@ -55,3 +55,5 @@ node ./node greeter_client.js
 - [【初心者向け】NPMとpackage.jsonを概念的に理解する](https://qiita.com/righteous/items/e5448cb2e7e11ab7d477)
 - [セマンティック バージョニング](https://semver.org/lang/ja/)
 - [How To Install Node.js on Ubuntu 22.04](https://www.digitalocean.com/community/tutorials/how-to-install-node-js-on-ubuntu-22-04)
+- [cv::Mat Class Reference](https://docs.opencv.org/4.x/d3/d63/classcv_1_1Mat.html)
+- [cv::Matの基本処理](http://opencv.jp/cookbook/opencv_mat.html)
