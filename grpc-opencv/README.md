@@ -57,3 +57,4 @@ node ./node greeter_client.js
 - [How To Install Node.js on Ubuntu 22.04](https://www.digitalocean.com/community/tutorials/how-to-install-node-js-on-ubuntu-22-04)
 - [cv::Mat Class Reference](https://docs.opencv.org/4.x/d3/d63/classcv_1_1Mat.html)
 - [cv::Matの基本処理](http://opencv.jp/cookbook/opencv_mat.html)
+- [How to convert opencv mat into string c++](https://stackoverflow.com/questions/61263971/how-to-convert-opencv-mat-into-string-c)
