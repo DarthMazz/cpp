@@ -39,4 +39,5 @@ message HelloRequest {
 // The response message containing the greetings
 message HelloReply {
   string message = 1;
+  bytes imagedata = 2;
 }

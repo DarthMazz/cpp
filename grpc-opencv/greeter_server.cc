@@ -55,6 +55,12 @@ class GreeterServiceImpl final : public Greeter::Service
     reply->set_message(prefix + request->name());
     // image.pngをimgに代入
     cv::Mat img = cv::imread("../image.jpg");
+    std::cout << "img.cols " << img.cols << std::endl;
+    std::cout << "img.rows " << img.rows << std::endl;
+    std::cout << "img.dims " << img.dims << std::endl;
+    std::cout << "img.channel " << img.channels() << std::endl;
+    std::cout << img(cv::Range(0, 2), cv::Range(0, 2)) << std::endl
+              << std::endl;
     return Status::OK;
   }
 };
